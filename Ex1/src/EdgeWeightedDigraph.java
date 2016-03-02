@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /******************************************************************************
  *  Compilation:  javac EdgeWeightedDigraph.java
  *  Execution:    java EdgeWeightedDigraph V E
@@ -242,7 +244,9 @@ public class EdgeWeightedDigraph {
      * Unit tests the <tt>EdgeWeightedDigraph</tt> data type.
      */
     public static void main(String[] args) {
-       
+    	In in = new In(args[0]);
+        EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
+        StdOut.println(G);
     }
 
 }
