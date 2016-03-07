@@ -1,3 +1,4 @@
+package outclasses;
 /******************************************************************************
  *  Compilation:  javac StdOut.java
  *  Execution:    java StdOut

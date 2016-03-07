@@ -1,3 +1,4 @@
+package algorithem;
 /******************************************************************************
  *  Compilation:  javac IndexMinPQ.java
  *  Execution:    java IndexMinPQ

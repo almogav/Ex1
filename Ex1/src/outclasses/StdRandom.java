@@ -1,3 +1,4 @@
+package outclasses;
 /******************************************************************************
  *  Compilation:  javac StdRandom.java
  *  Execution:    java StdRandom

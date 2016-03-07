@@ -1,3 +1,6 @@
+package algorithem;
+import outclasses.StdOut;
+
 /******************************************************************************
  *  Compilation:  javac DirectedEdge.java
  *  Execution:    java DirectedEdge
