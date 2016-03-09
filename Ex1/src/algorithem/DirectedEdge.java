@@ -83,7 +83,7 @@ public class DirectedEdge {
      * Unit tests the <tt>DirectedEdge</tt> data type.
      */
     public static void main(String[] args) {
-        DirectedEdge e = new DirectedEdge(12, 34, 5.67);
-        StdOut.println(e);
+       /* DirectedEdge e = new DirectedEdge(12, 34, 5.67);
+        StdOut.println(e);*/
     }
 }
