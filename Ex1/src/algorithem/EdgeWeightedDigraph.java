@@ -3,7 +3,6 @@ import java.util.Stack;
 
 import outclasses.Bag;
 import outclasses.In;
-import outclasses.StdOut;
 import outclasses.StdRandom;
 
 /******************************************************************************
@@ -54,7 +53,8 @@ public class EdgeWeightedDigraph {
      * @param  V the number of vertices
      * @throws IllegalArgumentException if <tt>V</tt> < 0
      */
-    public EdgeWeightedDigraph(int V) {
+    @SuppressWarnings("unchecked")
+	public EdgeWeightedDigraph(int V) {
         if (V < 0) throw new IllegalArgumentException("Number of vertices in a Digraph must be nonnegative");
         this.V = V;
         this.E = 0;
