@@ -3,6 +3,31 @@ Ex1 is a project that focus on an algorithmic library that represent graphs,
 and calculating shortest pathes between verticles in the graph.
 all of the algorithems and other outclasses were taken either from google or from http://algs4.cs.princeton.edu/44sp/
 
+# Overview
+## We used the following Classes and Algos:
+
+Algorithems: 
+
+* **DijkstraSP.java**
+
+* **DirectedEdge.java**
+
+* **EdgeWeightedDigraph.java**
+
+* **IndexMinPQ.java**
+
+OutClasses:
+
+* **In.java**
+
+* **Bag.java**
+
+* **StdIn.java**
+
+* **StdOut.java**
+
+* **StdRandom.java**
+
 ### Graph
 Graph class allows you to load graphs from a file (with a .txt ending) ,
 and represent them on the console.
