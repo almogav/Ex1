@@ -195,7 +195,7 @@ public class Graph_algo {
 	        return true;
 	    }
 	    public static void main(String[] args) {
-	        In in = new In("LargeEWD.txt");
+	        In in = new In("largeEWD.txt");
 	        EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
 	        int s = 4;
 
