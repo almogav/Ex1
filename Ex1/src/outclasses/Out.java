@@ -1,4 +1,4 @@
-package algorithem;
+package outclasses;
 
 /******************************************************************************
  *  Compilation:  javac Out.java
