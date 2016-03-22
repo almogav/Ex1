@@ -1,5 +1,7 @@
 package algorithem;
+import java.util.Iterator;
 import java.util.Stack;
+
 
 import outclasses.Bag;
 import outclasses.In;
@@ -244,6 +246,33 @@ public class EdgeWeightedDigraph {
             s.append(NEWLINE);
         }
         return s.toString();
+    }
+    public void setValidateVertex(int v, boolean value)
+    {
+      Iterable<DirectedEdge> ee = adj(v);
+      Iterator<DirectedEdge> i = ee.iterator();
+      while (i.hasNext())
+      {
+        DirectedEdge de = (DirectedEdge)i.next();
+        de.setValid(value);
+      }
+    }
+    
+    public void setValidateVertex(int[] vv, boolean value)
+    {
+      for (int i = 0; i < vv.length; i++) {
+        setValidateVertex(vv[i], value);
+      }
+    }
+    public void validAll()
+    {
+      Iterable<DirectedEdge> ee = edges();
+      Iterator<DirectedEdge> i = ee.iterator();
+      while (i.hasNext())
+      {
+        DirectedEdge de = (DirectedEdge)i.next();
+        de.setValid(true);
+      }
     }
 
     /**

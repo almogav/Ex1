@@ -26,6 +26,7 @@ public class DirectedEdge {
     private final int v;
     private final int w;
     private final double weight;
+    private boolean valid = true;
 
     /**
      * Initializes a directed edge from vertex <tt>v</tt> to vertex <tt>w</tt> with
@@ -68,6 +69,16 @@ public class DirectedEdge {
      */
     public double weight() {
         return weight;
+    }
+    
+    public boolean isValid()
+    {
+      return this.valid;
+    }
+    
+    public void setValid(boolean valid)
+    {
+      this.valid = valid;
     }
 
     /**
