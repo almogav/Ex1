@@ -197,7 +197,7 @@ public class Graph_algo {
 	    public static void main(String[] args) {
 	        In in = new In("largeEWD.txt");
 	        EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
-	        int s = 4;
+	       /* int s = 4;
 
 	        // compute shortest paths
 	        Graph_algo sp = new Graph_algo(G, s);
@@ -215,6 +215,6 @@ public class Graph_algo {
 	            else {
 	                StdOut.printf("%d to %d         no path\n", s, t);
 	            }
-	        }
+	        }*/
 	    }
 }
