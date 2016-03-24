@@ -68,13 +68,13 @@ public class Main_Ex1
     }
   }
   
-  private static void main1(String[] cmds)
+  public static void main1(String[] cmds)
     throws Exception
   {
     long start = new Date().getTime();
     System.out.println("SE1 Ex1: partual solution - for student testing");
     System.out.println("Loading graph file: " + cmds[0] + " runing a test " + cmds[1]);
-    String ans = "Solution_" + cmds[1] + "_" + cmds[0] + "_" + start + "_.txt";
+    String ans = "tests/Solution_" + cmds[1] + "_" + cmds[0] + "_" + start + "_.txt";
     
     FileWriter fw = new FileWriter(ans);
     PrintWriter os = new PrintWriter(fw);
