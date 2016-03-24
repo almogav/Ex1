@@ -64,7 +64,8 @@ public class EdgeWeightedGraph {
      * @param  V the number of vertices
      * @throws IllegalArgumentException if <tt>V</tt> < 0
      */
-    public EdgeWeightedGraph(int V) {
+    @SuppressWarnings("unchecked")
+	public EdgeWeightedGraph(int V) {
         if (V < 0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
         this.V = V;
         this.E = 0;

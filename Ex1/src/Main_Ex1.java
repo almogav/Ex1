@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.Date;
 
@@ -34,7 +33,8 @@ public class Main_Ex1
       f = args[0];
       test = args[1];
     }
-    String ans = test + "._ans.txt";
+    @SuppressWarnings("unused")
+	String ans = test + "._ans.txt";
     
     In in = new In(f);
     EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
@@ -83,7 +83,8 @@ public class Main_Ex1
     long s1 = new Date().getTime();
     System.out.println("Done loading Graph: " + cmds[0] + "  in " + (s1 - start) + "  ms");
     FileReader fr = new FileReader(cmds[1]);
-    BufferedReader is = new BufferedReader(fr);
+    @SuppressWarnings("resource")
+	BufferedReader is = new BufferedReader(fr);
     String num_of_lines = is.readLine();
     String s = is.readLine();
     int ll = 0;
