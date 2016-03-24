@@ -12,6 +12,7 @@ public class MyTest {
 
 	@Test
 	public void test() {
+		
 		/*In in = new In ("tinyEWD.txt");
 		EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
 		assertEquals(G.E(), 15);
