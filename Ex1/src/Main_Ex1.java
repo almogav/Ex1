@@ -114,10 +114,13 @@ public class Main_Ex1
   public static double sp(EdgeWeightedDigraph G, int source, int target, int[] BL)
   {
     double ans = -1.0D;
-    G.setValidateVertex(BL, false);
-    DijkstraSP sp = new DijkstraSP(G, source);
-    ans = sp.distTo(target);
-    G.setValidateVertex(BL, true);
+    for (int i = 0; i < BL.length; i++) {
+		if(target == BL[i]) return Double.POSITIVE_INFINITY;
+	}
+    G.setValidateVertex (BL, false);
+    DijkstraSP sp = new DijkstraSP (G, source);
+    ans = sp.distTo (target);
+    G.setValidateVertex (BL, true);
     return ans;
   }
 }

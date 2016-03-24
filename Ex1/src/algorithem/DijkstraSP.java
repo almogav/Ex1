@@ -88,6 +88,7 @@ public class DijkstraSP {
         while (!pq.isEmpty()) {
             int v = pq.delMin();
             for (DirectedEdge e : G.adj(v))
+            	if(e.isValid())
                 relax(e);
         }
 
