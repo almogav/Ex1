@@ -6,11 +6,21 @@ all of the algorithems and other outclasses were taken either from google or fro
 # Overview
 ## We used the following Classes and Algos:
 
+**Graph.java**
+
+**Main_Ex1.java**
+
 Algorithems: 
+
+* **DijkstraAllPairsSP.java**
+
+* **DijkstraUndirectedSP.java** 
 
 * **DijkstraSP.java**
 
 * **DirectedEdge.java**
+
+* **EdgeWeightedGraph.java**
 
 * **EdgeWeightedDigraph.java**
 
