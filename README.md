@@ -10,6 +10,8 @@ all of the algorithems and other outclasses were taken either from google or fro
 
 **Main_Ex1.java**
 
+**myTest.java**
+
 Algorithems: 
 
 * **DijkstraAllPairsSP.java**
