@@ -74,7 +74,7 @@ public class Main_Ex1
     long start = new Date().getTime();
     System.out.println("SE1 Ex1: partual solution - for student testing");
     System.out.println("Loading graph file: " + cmds[0] + " runing a test " + cmds[1]);
-    String ans = "tests/Solution_" + cmds[1] + "_" + cmds[0] + "_" + start + "_.txt";
+    String ans = "tests/Solution_" + cmds[1] + "_" + cmds[0]  + ".txt";
     
     FileWriter fw = new FileWriter(ans);
     PrintWriter os = new PrintWriter(fw);
