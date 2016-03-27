@@ -1,6 +1,5 @@
 package algorithem;
 
-import java.util.Iterator;
 import java.util.Stack;
 /******************************************************************************
  *  Compilation:  javac DijkstraSP.java
@@ -33,9 +32,6 @@ import java.util.Stack;
  *
  ******************************************************************************/
 
-import outclasses.Bag;
-import outclasses.In;
-import outclasses.StdOut;
 
 
 /**

@@ -7,31 +7,29 @@ import java.io.FileReader;
 
 import org.junit.Test;
 
-import outclasses.In;
 
 public class MyTest {
 
 	@Test
 	public void test() {
 
-		Main_Ex1 m = new Main_Ex1();
 		try {
 			
 		//here are the tests for the tiny EWD:
-			m.main1(new String[]{ "tinyEWD.txt","test1noPath.txt"});
-			m.main1(new String[]{ "tinyEWD.txt","test1.txt"});
-			m.main1(new String[]{ "tinyEWD.txt","test4EWD.txt"});
-			m.main1(new String[]{ "tinyEWD.txt","test5EWD.txt"});
+			Main_Ex1.main1(new String[]{ "tinyEWD.txt","test1noPath.txt"});
+			Main_Ex1.main1(new String[]{ "tinyEWD.txt","test1.txt"});
+			Main_Ex1.main1(new String[]{ "tinyEWD.txt","test4EWD.txt"});
+			Main_Ex1.main1(new String[]{ "tinyEWD.txt","test5EWD.txt"});
 
 		//test for tiny EWG:
-			m.main1(new String[]{ "tinyEWG.txt","test6EWG.txt"});
+			Main_Ex1.main1(new String[]{ "tinyEWG.txt","test6EWG.txt"});
 
 			
 		//here are the tests for the medium EWD:	
-			m.main1(new String[]{ "mediumEWD.txt","test1noPath.txt"});
-			m.main1(new String[]{ "mediumEWD.txt","test1.txt"});
-			m.main1(new String[]{ "mediumEWD.txt","test2.txt"});
-			m.main1(new String[]{ "mediumEWD.txt","test3.txt"});
+			Main_Ex1.main1(new String[]{ "mediumEWD.txt","test1noPath.txt"});
+			Main_Ex1.main1(new String[]{ "mediumEWD.txt","test1.txt"});
+			Main_Ex1.main1(new String[]{ "mediumEWD.txt","test2.txt"});
+			Main_Ex1.main1(new String[]{ "mediumEWD.txt","test3.txt"});
 
 			
 		} catch (Exception e) {
