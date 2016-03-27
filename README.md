@@ -14,17 +14,9 @@ all of the algorithems and other outclasses were taken either from google or fro
 
 Algorithems: 
 
-* **DijkstraAllPairsSP.java**
-
-* **DijkstraUndirectedSP.java** 
-
-* **DijkstraSP.java**
-
 * **DirectedEdge.java**
 
-* **EdgeWeightedGraph.java**
-
-* **EdgeWeightedDigraph.java**
+* **Graph_algo.java**
 
 * **IndexMinPQ.java**
 
