@@ -25,26 +25,32 @@ public class MyTest {
 
 		Main_Ex1 m = new Main_Ex1();
 		try {
+			
+		//here are the tests for the tiny EWD:
 			m.main1(new String[]{ "tinyEWD.txt","test1noPath.txt"});
 			m.main1(new String[]{ "tinyEWD.txt","test1.txt"});
 			m.main1(new String[]{ "tinyEWD.txt","test4EWD.txt"});
 			m.main1(new String[]{ "tinyEWD.txt","test5EWD.txt"});
 
+		//here are the tests for the medium EWD:	
 			m.main1(new String[]{ "mediumEWD.txt","test1noPath.txt"});
 			m.main1(new String[]{ "mediumEWD.txt","test1.txt"});
 			m.main1(new String[]{ "mediumEWD.txt","test2.txt"});
 			m.main1(new String[]{ "mediumEWD.txt","test3.txt"});
 
-
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+		assertTrue(FILES_ARE_SAME("tests/Solution_test1noPath.txt_tinyEWD.txt.txt", "checkTest/Solution_test1noPath.txt_tinyEWD.txt"));
 		assertTrue(FILES_ARE_SAME("tests/Solution_test1.txt_tinyEWD.txt.txt", "checkTest/Solution_test1.txt_tinyEWD.txt"));
-		assertTrue(FILES_ARE_SAME("tests/Solution_test2.txt_mediumEWD.txt.txt", "checkTest/Solution_test2.txt_mediumEWD.txt"));
-		assertTrue(FILES_ARE_SAME("tests/Solution_test3.txt_mediumEWD.txt.txt", "checkTest/Solution_test3.txt_mediumEWD.txt"));
 		assertTrue(FILES_ARE_SAME("tests/Solution_test4EWD.txt_tinyEWD.txt.txt", "checkTest/Solution_test4EWD.txt_tinyEWD.txt"));
 		assertTrue(FILES_ARE_SAME("tests/Solution_test5EWD.txt_tinyEWD.txt.txt", "checkTest/Solution_test5EWD.txt_tinyEWD.txt"));
-
+		assertTrue(FILES_ARE_SAME("tests/Solution_test1noPath.txt_mediumEWD.txt.txt", "checkTest/Solution_test1noPath.txt_mediumEWD.txt"));
+		assertTrue(FILES_ARE_SAME("tests/Solution_test1.txt_mediumEWD.txt.txt", "checkTest/Solution_test1.txt_mediumEWD.txt"));
+		assertTrue(FILES_ARE_SAME("tests/Solution_test2.txt_mediumEWD.txt.txt", "checkTest/Solution_test2.txt_mediumEWD.txt"));
+		assertTrue(FILES_ARE_SAME("tests/Solution_test3.txt_mediumEWD.txt.txt", "checkTest/Solution_test3.txt_mediumEWD.txt"));
 	}
 
 	public static boolean FILES_ARE_SAME(String OutPut,String Comp) 
