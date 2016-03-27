@@ -227,6 +227,7 @@ public class Graph {
 		return adj[v];
 	}
 	
+	
     public Iterable<DirectedEdge> edges() {
         Bag<DirectedEdge> list = new Bag<DirectedEdge>();
         for (int v = 0; v < V; v++) {
@@ -237,6 +238,9 @@ public class Graph {
         return list;
     } 
     
+    /*
+     * Set all the Edges of some vertex to boolean value
+     */
     public void setValidateVertex(int v, boolean value)
     {
       Iterable<DirectedEdge> ee = adj(v);
@@ -248,12 +252,19 @@ public class Graph {
       }
     }
     
+    
+    /*
+     * Set all the Edges of some verticles to boolean value
+     */
     public void setValidateVertex(int[] vv, boolean value)
     {
       for (int i = 0; i < vv.length; i++) {
         setValidateVertex(vv[i], value);
       }
     }
+    /*
+     * Set all the Edges of graph to boolean true
+     */
     public void validAll()
     {
       Iterable<DirectedEdge> ee = edges();

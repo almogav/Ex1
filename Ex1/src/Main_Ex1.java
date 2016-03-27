@@ -65,6 +65,10 @@ public class Main_Ex1
     os.close();
   }
   
+  /*
+   * returns the shortest path of two verticles in some graph
+   * with black list array of verticles
+   */
   public static double sp(Graph G, int source, int target, int[] BL)
   {
     double ans = -1.0D;
