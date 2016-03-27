@@ -32,6 +32,10 @@ public class MyTest {
 			m.main1(new String[]{ "tinyEWD.txt","test4EWD.txt"});
 			m.main1(new String[]{ "tinyEWD.txt","test5EWD.txt"});
 
+		//test for tiny EWG:
+			m.main1(new String[]{ "tinyEWG.txt","test6EWG.txt"});
+
+			
 		//here are the tests for the medium EWD:	
 			m.main1(new String[]{ "mediumEWD.txt","test1noPath.txt"});
 			m.main1(new String[]{ "mediumEWD.txt","test1.txt"});
@@ -47,6 +51,9 @@ public class MyTest {
 		assertTrue(FILES_ARE_SAME("tests/Solution_test1.txt_tinyEWD.txt.txt", "checkTest/Solution_test1.txt_tinyEWD.txt"));
 		assertTrue(FILES_ARE_SAME("tests/Solution_test4EWD.txt_tinyEWD.txt.txt", "checkTest/Solution_test4EWD.txt_tinyEWD.txt"));
 		assertTrue(FILES_ARE_SAME("tests/Solution_test5EWD.txt_tinyEWD.txt.txt", "checkTest/Solution_test5EWD.txt_tinyEWD.txt"));
+		
+		assertTrue(FILES_ARE_SAME("tests/Solution_test6EWG.txt_tinyEWG.txt.txt", "checkTest/Solution_test6EWG.txt_tinyEWG.txt"));
+
 		assertTrue(FILES_ARE_SAME("tests/Solution_test1noPath.txt_mediumEWD.txt.txt", "checkTest/Solution_test1noPath.txt_mediumEWD.txt"));
 		assertTrue(FILES_ARE_SAME("tests/Solution_test1.txt_mediumEWD.txt.txt", "checkTest/Solution_test1.txt_mediumEWD.txt"));
 		assertTrue(FILES_ARE_SAME("tests/Solution_test2.txt_mediumEWD.txt.txt", "checkTest/Solution_test2.txt_mediumEWD.txt"));
