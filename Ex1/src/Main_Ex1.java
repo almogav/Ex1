@@ -3,12 +3,9 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Date;
-
-import algorithem.DijkstraSP;
-import algorithem.DirectedEdge;
-import algorithem.EdgeWeightedDigraph;
+import algorithem.Graph;
+import algorithem.Graph_algo;
 import outclasses.In;
-import outclasses.StdOut;
 
 public class Main_Ex1
 {
@@ -24,50 +21,7 @@ public class Main_Ex1
     }
   }
   
-  public static void main0(String[] args)
-  {
-    String f = "data/mediumEWD.txt";
-    String test = "data/test1.txt";
-    if ((args != null) && (args.length > 2))
-    {
-      f = args[0];
-      test = args[1];
-    }
-    @SuppressWarnings("unused")
-	String ans = test + "._ans.txt";
-    
-    In in = new In(f);
-    EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
-    int s = Integer.parseInt("1");
-    
-    DijkstraSP sp = new DijkstraSP(G, s);
-    for (int t = 0; t < G.V(); t++) {
-      if ((t % 100 == 0) && 
-        (sp.hasPathTo(t)))
-      {
-        StdOut.printf("%d to %d (%.2f)  ", new Object[] { Integer.valueOf(s), Integer.valueOf(t), Double.valueOf(sp.distTo(t)) });
-        for (DirectedEdge e : sp.pathTo(t)) {
-          StdOut.print(e + "   ");
-        }
-        StdOut.println();
-      }
-    }
-    int[] invalid = { 44, 14, 128 };
-    G.setValidateVertex(invalid, false);
-    sp = new DijkstraSP(G, s);
-    for (int t = 0; t < G.V(); t++) {
-      if ((t % 100 == 0) && 
-        (sp.hasPathTo(t)))
-      {
-        StdOut.printf("%d to %d (%.2f)  ", new Object[] { Integer.valueOf(s), Integer.valueOf(t), Double.valueOf(sp.distTo(t)) });
-        for (DirectedEdge e : sp.pathTo(t)) {
-          StdOut.print(e + "   ");
-        }
-        StdOut.println();
-      }
-    }
-  }
-  
+ 
   public static void main1(String[] cmds)
     throws Exception
   {
@@ -79,7 +33,7 @@ public class Main_Ex1
     FileWriter fw = new FileWriter(ans);
     PrintWriter os = new PrintWriter(fw);
     In in = new In(cmds[0]);
-    EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
+    Graph G = new Graph(in);
     long s1 = new Date().getTime();
     System.out.println("Done loading Graph: " + cmds[0] + "  in " + (s1 - start) + "  ms");
     FileReader fr = new FileReader(cmds[1]);
@@ -111,14 +65,14 @@ public class Main_Ex1
     os.close();
   }
   
-  public static double sp(EdgeWeightedDigraph G, int source, int target, int[] BL)
+  public static double sp(Graph G, int source, int target, int[] BL)
   {
     double ans = -1.0D;
     for (int i = 0; i < BL.length; i++) {
-		if(target == BL[i]) return Double.POSITIVE_INFINITY;
+		if(target == BL[i] || source == BL[i]) return Double.POSITIVE_INFINITY;
 	}
     G.setValidateVertex (BL, false);
-    DijkstraSP sp = new DijkstraSP (G, source);
+    Graph_algo sp = new Graph_algo (G, source);
     ans = sp.distTo (target);
     G.setValidateVertex (BL, true);
     return ans;
