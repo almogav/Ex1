@@ -32,8 +32,6 @@ import java.util.Stack;
  *
  ******************************************************************************/
 
-import outclasses.In;
-import outclasses.StdOut;
 
 
 /**
@@ -70,7 +68,7 @@ public class Graph_algo {
 	     * @throws IllegalArgumentException if an edge weight is negative
 	     * @throws IllegalArgumentException unless 0 &le; <tt>s</tt> &le; <tt>V</tt> - 1
 	     */
-	    public Graph_algo(EdgeWeightedDigraph G, int s) {
+	    public Graph_algo(Graph G, int s) {
 	        for (DirectedEdge e : G.edges()) {
 	            if (e.weight() < 0)
 	                throw new IllegalArgumentException("edge " + e + " has negative weight");
@@ -88,6 +86,7 @@ public class Graph_algo {
 	        while (!pq.isEmpty()) {
 	            int v = pq.delMin();
 	            for (DirectedEdge e : G.adj(v))
+	            	if(e.isValid())
 	                relax(e);
 	        }
 
@@ -147,7 +146,7 @@ public class Graph_algo {
 	    // check optimality conditions:
 	    // (i) for all edges e:            distTo[e.to()] <= distTo[e.from()] + e.weight()
 	    // (ii) for all edge e on the SPT: distTo[e.to()] == distTo[e.from()] + e.weight()
-	    private boolean check(EdgeWeightedDigraph G, int s) {
+	    private boolean check(Graph G, int s) {
 
 	        // check that edge weights are nonnegative
 	        for (DirectedEdge e : G.edges()) {
@@ -194,27 +193,7 @@ public class Graph_algo {
 	        }
 	        return true;
 	    }
-	    public static void main(String[] args) {
-	        In in = new In("largeEWD.txt");
-	        EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
-	        int s = 4;
-
-	        // compute shortest paths
-	        Graph_algo sp = new Graph_algo(G, s);
-
-
-	        // print shortest path
-	        for (int t = 0; t < G.V(); t++) {
-	            if (sp.hasPathTo(t)) {
-	                StdOut.printf("%d to %d (%.2f)  ", s, t, sp.distTo(t));
-	                for (DirectedEdge e : sp.pathTo(t)) {
-	                    StdOut.print(e + "   ");
-	                }
-	                StdOut.println();
-	            }
-	            else {
-	                StdOut.printf("%d to %d         no path\n", s, t);
-	            }
-	        }
-	    }
+	    
+	    
+	    
 }
